@@ -8,27 +8,17 @@ export default async function HomePage() {
 
   return (
     <div>
-      <article>
-        <h1>Writing about systems, culture, and craft.</h1>
-        <p>
-          Yin is a minimal, single-column blog focused on reflective essays about
-          technology, aesthetics, and the pace of change. It is inspired by the
-          calm cadence of UrlAhmed.
-        </p>
-        <p>
-          Start with the latest essays below or browse the full archive on the{" "}
-          <Link href="/blog">blog page</Link>.
-        </p>
-      </article>
+      <h1>Yin</h1>
+      <p>
+        A blog. See <Link href="/blog">all posts</Link>.
+      </p>
 
-      <section>
-        <h2>Latest writing</h2>
-        <ul className="post-list">
-          {latest.map((post) => (
-            <PostListItem key={post.url} post={post} />
-          ))}
-        </ul>
-      </section>
+      <h2>Recent</h2>
+      <ul className="post-list">
+        {latest.map((post) => (
+          <PostListItem key={post.url} post={post} />
+        ))}
+      </ul>
     </div>
   );
 }
