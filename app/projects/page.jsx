@@ -4,37 +4,26 @@ export const metadata = {
 
 const projects = [
   {
-    title: "Signal Atlas",
-    description:
-      "A research-driven publication tracking how cultural signals age in the era of synthetic media.",
-    link: "https://example.com/signal-atlas"
+    title: "Project 1",
+    link: "https://example.com/project-1"
   },
   {
-    title: "Small Systems Lab",
-    description:
-      "A micro-consultancy helping teams design humane automations and thoughtful tooling.",
-    link: "https://example.com/small-systems"
+    title: "Project 2",
+    link: "https://example.com/project-2"
   }
 ];
 
 export default function ProjectsPage() {
   return (
-    <article>
+    <div>
       <h1>Projects</h1>
-      <p>
-        Selected experiments and collaborations that explore how craft and code
-        intertwine.
-      </p>
-      <ul className="post-list">
+      <ul>
         {projects.map((project) => (
-          <li key={project.title} className="post-list-item">
-            <h2>
-              <a href={project.link}>{project.title}</a>
-            </h2>
-            <p>{project.description}</p>
+          <li key={project.title}>
+            <a href={project.link}>{project.title}</a>
           </li>
         ))}
       </ul>
-    </article>
+    </div>
   );
 }

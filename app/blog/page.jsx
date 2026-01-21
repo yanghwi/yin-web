@@ -10,13 +10,7 @@ export default async function BlogPage() {
 
   return (
     <div>
-      <article>
-        <h1>Blog</h1>
-        <p>
-          An archive of essays exploring cultural half-lives, tooling, and the
-          human side of automation.
-        </p>
-      </article>
+      <h1>Blog</h1>
       <ul className="post-list">
         {posts.map((post) => (
           <PostListItem key={post.url} post={post} />

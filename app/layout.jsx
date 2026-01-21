@@ -7,18 +7,16 @@ export const metadata = {
     default: "Yin",
     template: "%s | Yin"
   },
-  description: "A minimal single-column blog inspired by UrlAhmed."
+  description: "A minimal blog."
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div className="layout">
-          <HeaderNav />
-          <main>{children}</main>
-          <Footer />
-        </div>
+        <HeaderNav />
+        {children}
+        <Footer />
       </body>
     </html>
   );

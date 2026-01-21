@@ -35,14 +35,11 @@ export default async function PostPage({ params }) {
   const { previous, next } = await getAdjacentPosts(post);
 
   return (
-    <article>
+    <div>
       <h1>{post.title}</h1>
-      <div className="meta">
-        <span>{formatPostDate(post.date)}</span>
-        {post.tags.length > 0 && <span>{post.tags.join(", ")}</span>}
-      </div>
+      <div className="meta">{formatPostDate(post.date)}</div>
       <div dangerouslySetInnerHTML={{ __html: html }} />
       <PrevNextNav previous={previous} next={next} />
-    </article>
+    </div>
   );
 }
