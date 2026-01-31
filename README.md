@@ -1,31 +1,15 @@
-# Yin
+# yanghwi
 
-새로운 프로젝트를 시작하기 위한 저장소입니다.
+Personal profile website - minimal single-page HTML with Tailwind CSS.
 
-## 프로젝트 개요
+## Usage
 
-Next.js 14 기반의 미니멀 1열 블로그입니다. Markdown 파일로 작성된 글을
-정적 라우트(`/YYYY/MM/DD/slug/`)로 노출하며, 상단 전역 네비게이션과 이전·다음
-글 이동 링크를 제공합니다.
+Open `index.html` directly in a browser, or deploy to any static hosting service.
 
-## 개발 환경 준비
+## Customization
 
-1. 의존성 설치
-
-   ```bash
-   npm install
-   ```
-
-2. 개발 서버 실행
-
-   ```bash
-   npm run dev
-   ```
-
-## 진행 상태
-
-- [x] 기본 프로젝트 구조 생성
-- [x] 주요 기능 설계
-- [ ] 테스트 환경 구성
-
-필요한 변경 사항을 자유롭게 추가하세요.
+Edit `index.html` to update:
+- Name and role in the hero section
+- Bio text
+- Project entries
+- Contact email
