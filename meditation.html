@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Mind Illuminated</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:"Pretendard",-apple-system,BlinkMacSystemFont,sans-serif;background:#f5f5f5;color:#000;line-height:1.8;display:flex;min-height:100vh}
+a{color:#000;text-decoration-color:#888}
+nav{width:260px;min-width:260px;background:#efefef;border-right:1px solid #d0d0d0;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem 0}
+nav .sec{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.08em;color:#888;padding:1.2rem 1rem 0.2rem}
+nav a{display:block;padding:0.25rem 1rem;text-decoration:none;color:#555;border-left:2px solid transparent;line-height:1.5}
+nav a:hover{color:#000}
+nav a.active{border-left-color:#000;font-weight:600;color:#000}
+nav .num{font-variant-numeric:tabular-nums;color:#888;margin-right:0.4em;display:inline-block;width:1.5em}
+main{flex:1;max-width:740px;padding:2.5rem 2rem 4rem;margin:0 auto}
+h2{font-size:1.3rem;font-weight:600;margin:2.5rem 0 0.8rem;line-height:1.3}
+h3{font-size:1.05rem;font-weight:600;margin:2rem 0 0.5rem}
+dt{font-weight:600;margin-top:0.8rem}
+dd{margin-left:0;padding-left:1.2rem;color:#555}
+.stage-badge{font-size:0.75rem;color:#888;margin-bottom:1rem}
+.callout{border-left:3px solid #000;padding:0.8rem 1.2rem;margin:1.5rem 0}
+.callout-title{font-size:0.75rem;font-weight:600;text-transform:uppercase;color:#555;margin-bottom:0.3rem}
+pre.ascii{line-height:1.3;font-size:0.75rem;font-family:"JetBrains Mono","Fira Code",Consolas,monospace;background:#eaeaea;border-left:3px solid #000;padding:1rem 1.2rem;overflow-x:auto;margin:1rem 0 1.5rem;white-space:pre}
+table{border-collapse:collapse;width:100%;margin:1rem 0 1.5rem}
+th,td{border-bottom:1px solid #d0d0d0;padding:0.4rem 0.6rem;text-align:left}
+th{font-weight:600;font-size:0.75rem;text-transform:uppercase;border-bottom:2px solid #000}
+.page-nav{border-top:1px solid #d0d0d0;padding-top:1rem;margin-top:2.5rem;display:flex;justify-content:space-between}
+.page-nav a{color:#555}
+.toc-title{font-weight:600;padding:0 1rem 1rem}
+@media(max-width:768px){body{flex-direction:column}nav{width:100%;min-width:100%;height:auto;position:static;border-right:none;border-bottom:1px solid #d0d0d0;padding:1rem 0;max-height:50vh;overflow-y:auto}main{padding:1.5rem 1rem 3rem}pre.ascii{font-size:0.65rem;padding:0.7rem}}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="toc-title">The Mind Illuminated</div>
+<div class="sec">Overview</div>
+<a href="#intro">서문: 왜 이 가이드인가</a>
+<a href="#mind-model">마음 모델 개요</a>
+<a href="#roadmap">10단계 로드맵</a>
+
+<div class="sec">Novice</div>
+<a href="#stage1"><span class="num">01</span>습관 만들기</a>
+<a href="#stage2"><span class="num">02</span>주의 유지</a>
+<a href="#stage3"><span class="num">03</span>주의 확장</a>
+
+<div class="sec">Skilled</div>
+<a href="#stage4"><span class="num">04</span>산만함 극복</a>
+<a href="#stage5"><span class="num">05</span>무기력 극복</a>
+<a href="#stage6"><span class="num">06</span>주의력 안정</a>
+
+<div class="sec">Transition</div>
+<a href="#stage7"><span class="num">07</span>배타적 주의</a>
+
+<div class="sec">Adept</div>
+<a href="#stage8"><span class="num">08</span>정신적 유연성</a>
+<a href="#stage9"><span class="num">09</span>정신적 고요</a>
+<a href="#stage10"><span class="num">10</span>고요와 평정</a>
+
+<div class="sec">부록</div>
+<a href="#glossary">용어 사전</a>
+</nav>
+
+<main>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- OVERVIEW: 서문                              -->
+<!-- ═══════════════════════════════════════════ -->
+
+<section id="intro">
+<h2>서문: 왜 이 가이드인가</h2>
+
+<p>이 가이드는 Culadasa(John Yates)의 <em>The Mind Illuminated</em>(이하 TMI)의 핵심 모델과 수행 지침을 한국어로 정리한 참조 문서이다. 원서의 10단계 명상 훈련 체계, 의식 모델, 실전 기법을 ASCII 다이어그램과 함께 압축적으로 제시한다.</p>
+
+<div class="callout">
+<div class="callout-title">Note</div>
+<p>이 가이드는 원서를 <em>대체하지 않는다.</em> TMI 원서에는 각 단계별 세밀한 뉘앙스, 풍부한 비유, 실전 사례가 담겨 있으며, 이 가이드는 그 구조를 빠르게 참조하기 위한 보조 도구일 뿐이다. 반드시 원서를 함께 읽을 것을 권한다.</p>
+</div>
+
+<p>TMI는 부처의 <em>Ānāpānasati Sutta</em>, Asanga의 9단계 집중 발달 모델, 그리고 현대 인지과학을 융합하여 재가 수행자를 위한 체계적 명상 로드맵을 제시한다. 핵심 원리는 다음과 같다:</p>
+
+<dl>
+<dt>Śamatha(사마타)와 Vipassanā(위빠사나)의 통합</dt>
+<dd><em>Stable attention</em>(안정된 주의, samādhi)과 <em>mindfulness</em>(마음챙김, sati)를 새의 양 날개처럼 함께 계발한다.</dd>
+
+<dt>의도 기반 훈련</dt>
+<dd>명상에서 우리가 실제로 하는 것은 올바른 <em>의도(intention)</em>를 형성하고 유지하는 것뿐이다. 의지력으로 마음을 강제하지 않는다.</dd>
+
+<dt>Awakening(깨달음)이라는 목표</dt>
+<dd>일시적 평온이 아니라 궁극적 진리에 대한 인지적 사건, 즉 영구적인 고통으로부터의 해방이 최종 목표이다.</dd>
+</dl>
+
+<div class="page-nav">
+<span></span>
+<a href="#mind-model">다음: 마음 모델 개요 →</a>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- OVERVIEW: 마음 모델 개요                     -->
+<!-- ═══════════════════════════════════════════ -->
+
+<section id="mind-model">
+<h2>마음 모델 개요</h2>
+
+<p>TMI의 수행 체계를 이해하려면 두 가지 핵심 모델을 먼저 파악해야 한다: <em>주의와 주변 인식의 구분</em>, 그리고 <em>의식의 순간 모델</em>이다.</p>
+
+<h3>Attention(주의) vs. Peripheral Awareness(주변 인식)</h3>
+
+<p>의식적 경험은 두 가지 근본적으로 다른 <em>앎의 방식</em>으로 구성된다. <em>Attention</em>(주의)은 하나의 대상을 선별하여 분석하고 해석하는 집중적 앎이다. <em>Peripheral awareness</em>(주변 인식)는 전체적이고 관계적이며 맥락적으로 모든 것을 포괄하는 배경 인식이다. 이 둘은 시각적 초점과 주변 시야의 관계와 유사하다.</p>
+
+<pre class="ascii"><code>  Attention vs. Peripheral Awareness
+  ════════════════════════════════════════
+
+  의식의 장(Conscious Field)
+  ┌────────────────────────────────────┐
+  │  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  │
+  │  ░░░ Peripheral Awareness ░░░░░░  │
+  │  ░░░ (주변 인식)            ░░░░  │
+  │  ░░░                        ░░░░  │
+  │  ░░░░  ┌──────────────┐  ░░░░░░  │
+  │  ░░░░  │  ◉ Attention │  ░░░░░░  │
+  │  ░░░░  │   (주의)     │  ░░░░░░  │
+  │  ░░░░  │  분석·해석    │  ░░░░░░  │
+  │  ░░░░  │  개념화·추상화│  ░░░░░░  │
+  │  ░░░░  └──────────────┘  ░░░░░░  │
+  │  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  │
+  │  ░ 전체적·관계적·맥락적 ░░░░░░░░  │
+  │  ░ 최소 개념적·빠른 반응 ░░░░░░░  │
+  └────────────────────────────────────┘
+
+  ※ ◉ = 주의의 초점(좁고 집중적)
+  ※ ░ = 주변 인식(넓고 포괄적)
+  ※ 둘은 제한된 의식 에너지를 공유한다
+</code></pre>
+
+<p><em>Mindfulness</em>(마음챙김)는 단순히 주의를 기울이는 것이 아니다. <em>Attention과 peripheral awareness의 최적 상호작용</em>으로 정의된다. 의식의 총 에너지가 제한되어 있기 때문에, 주의가 강해지면 인식이 약해지고 그 역도 마찬가지이다. 마음챙김 훈련은 이 총 에너지를 증가시켜 양쪽 모두가 동시에 강력해질 수 있게 한다.</p>
+
+<h3>Moments of Consciousness(의식의 순간) 모델</h3>
+
+<p>의식은 연속적 흐름이 아니라 개별적인 <em>의식의 순간들</em>의 빠른 연속이다. 각 순간은 하나의 대상만 인식하며, 이 순간들이 빠르게 교대하면서 동시적 인식의 환상을 만든다.</p>
+
+<pre class="ascii"><code>  Moments of Consciousness
+  ════════════════════════════════════════
+
+  시간 →
+  ┌──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┐
+  │A │b │A │A │b │A │b │A │A │A │b │
+  └──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┘
+   ↑                                ↑
+   │  ████ = Attention moment (A)   │
+   │  ░░░░ = Awareness moment (b)   │
+   │                                │
+   └─ 각 순간은 하나의 대상만 인식 ──┘
+
+  주의 지배적:  AAAA b AAAA b AA
+  ┌──────────────────────────────────┐
+  │████████░████████░████████████████│
+  └──────────────────────────────────┘
+  → 집중은 강하나 주변 인식이 약함
+
+  균형 상태:    AA bb AA bb AA bb
+  ┌──────────────────────────────────┐
+  │████░░░░████░░░░████░░░░████░░░░░│
+  └──────────────────────────────────┘
+  → 마음챙김: 주의와 인식 모두 강함
+
+  ※ A = Attention moment (주의 순간)
+  ※ b = binding moment (인식/연결 순간)
+  ※ 비율이 주의력과 인식의 균형을 결정
+</code></pre>
+
+<p>이 모델은 산만, 둔화, 잊어버림의 메커니즘을 정밀하게 설명한다. <em>Subtle distraction</em>(미묘한 산만)은 주의 순간의 일부가 호흡이 아닌 다른 대상에 할당되는 것이고, <em>gross distraction</em>(거친 산만)은 다른 대상의 주의 순간이 호흡을 압도하는 것이며, <em>forgetting</em>(잊어버림)은 호흡에 대한 주의 순간이 완전히 사라지는 것이다.</p>
+
+<div class="page-nav">
+<a href="#intro">← 이전: 서문</a>
+<a href="#roadmap">다음: 10단계 로드맵 →</a>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- OVERVIEW: 10단계 로드맵                      -->
+<!-- ═══════════════════════════════════════════ -->
+
+<section id="roadmap">
+<h2>10단계 로드맵</h2>
+
+<p>TMI의 10단계는 4개의 <em>이정표(Milestone)</em>로 구분된다. 각 이정표는 수행이 질적으로 새로운 수준으로 전환되는 지점이다. 실제 수행은 선형적이지 않으며, 한 세션 안에서도 여러 단계를 오갈 수 있다.</p>
+
+<pre class="ascii"><code>  10-Stage Meditation Roadmap
+  ════════════════════════════════════════
+
+  NOVICE (초보자)
+  ┌─────────────────────────────────────┐
+  │ Stage 1 │ 습관 만들기              │
+  │ Stage 2 │ 주의 유지                │
+  │ Stage 3 │ 주의 확장                │
+  └────────────────┬────────────────────┘
+                   ▼
+        ╔═══════════════════════╗
+        ║ Milestone 1           ║
+        ║ Continuous Attention  ║
+        ║ (지속적 주의)         ║
+        ╚═══════════╤═══════════╝
+                    ▼
+  SKILLED (숙련)
+  ┌─────────────────────────────────────┐
+  │ Stage 4 │ 산만함 극복              │
+  │ Stage 5 │ 무기력 극복              │
+  │ Stage 6 │ 주의력 안정              │
+  └────────────────┬────────────────────┘
+                   ▼
+        ╔═══════════════════════╗
+        ║ Milestone 2           ║
+        ║ Exclusive Attention   ║
+        ║ (배타적 주의)         ║
+        ╚═══════════╤═══════════╝
+                    ▼
+  TRANSITION (전환)
+  ┌─────────────────────────────────────┐
+  │ Stage 7 │ 배타적 주의              │
+  └────────────────┬────────────────────┘
+                   ▼
+        ╔═══════════════════════╗
+        ║ Milestone 3           ║
+        ║ Effortless Stability  ║
+        ║ (무노력 안정)         ║
+        ╚═══════════╤═══════════╝
+                    ▼
+  ADEPT (숙달)
+  ┌─────────────────────────────────────┐
+  │ Stage 8 │ 정신적 유연성            │
+  │ Stage 9 │ 정신적 고요              │
+  │ Stage 10│ 고요와 평정              │
+  └────────────────┬────────────────────┘
+                   ▼
+        ╔═══════════════════════╗
+        ║ Milestone 4           ║
+        ║ Persistence of        ║
+        ║ Samatha Qualities     ║
+        ║ (사마타 특성의 지속)  ║
+        ╚═══════════════════════╝
+
+  ※ ══ = Milestone (이정표, 질적 전환점)
+  ※ 실제 수행은 비선형적: 한 세션 안에서
+     여러 단계를 오갈 수 있다
+</code></pre>
+
+<h3>10단계 요약</h3>
+
+<table>
+<thead>
+<tr><th>Stage</th><th>핵심 과제</th><th>주요 장애물</th></tr>
+</thead>
+<tbody>
+<tr><td>01</td><td>일관된 수행 습관 확립</td><td>미루기, 저항, 자기 의심</td></tr>
+<tr><td>02</td><td>마음방황 극복, 호흡 따르기</td><td>마음방황, 조급함</td></tr>
+<tr><td>03</td><td>잊어버림 극복, 주의 연장</td><td>잊어버림, 둔화</td></tr>
+<tr><td>04</td><td>거친 산만·강한 둔화 극복</td><td>Gross distraction, strong dullness</td></tr>
+<tr><td>05</td><td>미세 둔함 극복</td><td>Subtle dullness</td></tr>
+<tr><td>06</td><td>미세 산만 극복, 배타적 주의</td><td>Subtle distractions</td></tr>
+<tr><td>07</td><td>마음의 통일, 무노력 안정</td><td>건조함, 통제 습관</td></tr>
+<tr><td>08</td><td>정신적 유연성, 감각 고요화</td><td>비정상적 감각, 에너지 격동</td></tr>
+<tr><td>09</td><td>기쁨 강도 완화, 고요 출현</td><td>에너지 강도 증가, 흥분</td></tr>
+<tr><td>10</td><td>사마타를 일상으로 확장</td><td>일상 자극에 의한 평정심 압도</td></tr>
+</tbody>
+</table>
+
+<div class="page-nav">
+<a href="#mind-model">← 이전: 마음 모델 개요</a>
+<a href="#stage1">다음: Stage 1 →</a>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- STAGE 1                                     -->
+<!-- ═══════════════════════════════════════════ -->
+
+<section id="stage1">
+<h2>Stage 1: 습관 만들기</h2>
+<div class="stage-badge">Novice · Stage 01</div>
+
+<dl>
+<dt>목표</dt>
+<dd>매일 빠짐없이 앉아 수행하는 일관된 명상 습관을 확립한다.</dd>
+
+<dt>완료 기준</dt>
+<dd>불가피한 경우를 제외하고 매일 수행을 절대 빠뜨리지 않으며, 쿠션 위에서 공상 대신 실제 명상에 몰입한다.</dd>
+
+<dt>주요 장애물</dt>
+<dd>시간 부족, 미루기(procrastination), 꺼림과 저항(reluctance and resistance), 자기 의심(self-doubt).</dd>
+</dl>
+
+<h3>수행 확립의 장애와 극복</h3>
+
+<p>Stage 1은 전체 10단계의 기초이다. 가장 어렵지만 몇 주 안에 숙달할 수 있다. 핵심 해법은 의지력과 강제가 아닌 <em>동기와 의도를 강화</em>하여 자연스럽게 앉게 만드는 것이다. 좋은 명상은 했던 것이고, 유일한 나쁜 명상은 하지 않은 것이다.</p>
+
+<pre class="ascii"><code>  수행 확립의 4대 장애물
+  ════════════════════════════════════════
+
+  시간 부족 ──→ 해법: 우선순위 재배치
+       │        15분부터 시작, 매주 5분 증가
+       ▼
+  미루기 ────→ 해법: "그냥 하기(just do it)"
+       │        시작하면 게으름은 사라진다
+       ▼
+  꺼림/저항 ──→ 해법: 수행을 즐겁게 만들기
+       │        기대를 내려놓기
+       ▼
+  자기 의심 ──→ 해법: 동기 강화, 비교하지 않기
+                 지적 능력은 중요하지 않다
+
+  ※ 모든 장애물의 공통 해독제:
+     의도(intention) + 인내(patience)
+</code></pre>
+
+<h3>핵심 기법</h3>
+
+<p><em>Six Point Preparation</em>(6가지 준비)으로 세션을 시작한다: 동기(Motivation) 확인, 합리적 목표(Goals) 설정, 기대(Expectations) 경계, 성실(Diligence) 결의, 잠재적 산만함(Distractions) 점검, 자세(Posture) 조정. 이후 <em>Four-Step Transition</em>(4단계 전환)으로 일상에서 호흡 관찰로 부드럽게 이행한다.</p>
+
+<pre class="ascii"><code>  Four-Step Transition
+  ════════════════════════════════════════
+
+  Step 1          Step 2          Step 3
+  현재에 집중      신체 감각       호흡 감각
+  ┌──────────┐   ┌──────────┐   ┌──────────┐
+  │ ○○○○○○○ │   │ ○○○○○   │   │ ○○○     │
+  │ 모든 감각 │→ │ 몸 전체  │→ │ 호흡관련 │
+  │ 열린 인식 │   │ 감각만   │   │ 감각만   │
+  └──────────┘   └──────────┘   └──────────┘
+                                      │
+                                      ▼
+                                 Step 4
+                                 코 끝 호흡
+                                ┌──────────┐
+                                │ ◉ 코 끝  │
+                                │ 호흡 감각 │
+                                │ (초점)   │
+                                └──────────┘
+
+  ※ ○ = 열린 인식 (넓음 → 좁음)
+  ※ ◉ = 집중된 주의 (명상 대상)
+  ※ 각 단계에서 주변 인식은 항상 유지
+</code></pre>
+
+<div class="callout">
+<div class="callout-title">수행 요령</div>
+<p>처음 1~2주는 15~20분부터 시작하여 매주 5분씩 증가한다. 최소 목표는 45분이다. 이른 아침 또는 오후 1시 이전이 최적 시간이며, 식사 직후는 피한다.</p>
+</div>
+
+<div class="page-nav">
+<a href="#roadmap">← 이전: 10단계 로드맵</a>
+<a href="#stage2">다음: Stage 2 →</a>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- STAGE 2                                     -->
+<!-- ═══════════════════════════════════════════ -->
+
+<section id="stage2">
+<h2>Stage 2: 주의 유지</h2>
+<div class="stage-badge">Novice · Stage 02</div>
+
+<dl>
+<dt>목표</dt>
+<dd>마음방황에서 깨어나는 순간을 긍정적으로 강화하고, 호흡 따르기(following the breath)로 주의를 유지한다.</dd>
+
+<dt>완료 기준</dt>
+<dd>호흡에 대한 주의를 수 분간 지속하며, 마음방황은 몇 초 이내로 짧아진다.</dd>
+
+<dt>주요 장애물</dt>
+<dd>마음방황(mind-wandering), 조급함(impatience).</dd>
+</dl>
+
+<h3>마음방황의 메커니즘과 긍정적 강화</h3>
+
+<p>마음방황 극복의 핵심은 <em>긍정적 강화(positive reinforcement)</em>이다. 마음방황 중 갑자기 깨어나는 <em>아하! 순간</em>은 무의식적 내성적 인식의 자발적 발현이다. 이 순간을 즐기고 감사하면 무의식이 더 빨리, 더 자주 깨어나도록 훈련된다. 자기 비판은 오히려 이 과정을 억제한다.</p>
+
+<pre class="ascii"><code>  마음방황 극복 메커니즘
+  ════════════════════════════════════════
+
+  호흡 ◉ ─────→ 산만 발생 → 마음방황
+       │                        │
+       │                        │ (시간 경과)
+       │                        ▼
+       │              ┌─────────────────┐
+       │              │  아하! 순간     │
+       │              │  (자발적 인식)  │
+       │              └────────┬────────┘
+       │                       │
+       │            ┌──────────┴──────────┐
+       │            ▼                     ▼
+       │   ┌─────────────┐     ┌──────────────┐
+       │   │ ✓ 긍정 강화 │     │ ✗ 자기 비판  │
+       │   │ "잘 알아챘다"│     │ "또 방황했네" │
+       │   └──────┬──────┘     └──────┬───────┘
+       │          │                    │
+       │          ▼                    ▼
+       │   무의식 학습:         무의식 학습:
+       │   "더 빨리 깨어나자"   "깨어나지 말자"
+       │          │
+       ◀──────────┘
+       호흡으로 복귀
+
+  ※ 긍정 강화 = 반려동물 훈련 원리와 동일
+  ※ 핵심: 방황 자체가 아닌 깨어남에 반응
+</code></pre>
+
+<h3>핵심 기법</h3>
+
+<p><em>Following the breath</em>(호흡 따르기): 들숨과 날숨의 정확한 시작과 끝 지점을 식별하고, 사이의 멈춤을 인식하며, 각 호흡 주기 중 가능한 많은 감각을 관찰한다. 게임처럼 도전적으로 접근하여 마음이 능동적으로 몰입하게 한다.</p>
+
+<div class="callout">
+<div class="callout-title">수행 요령</div>
+<p>성공 공식: <em>relax and look for the joy; observe; let it come, let it be, and let it go.</em> 긴장을 놓고, 기쁨을 찾고, 반응 없이 관찰하며, 오게 하고 있게 하고 가게 한다.</p>
+</div>
+
+<div class="page-nav">
+<a href="#stage1">← 이전: Stage 1</a>
+<a href="#stage3">다음: Stage 3 →</a>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- STAGE 3                                     -->
+<!-- ═══════════════════════════════════════════ -->
+
+<section id="stage3">
+<h2>Stage 3: 주의 확장</h2>
+<div class="stage-badge">Novice · Stage 03</div>
+
+<dl>
+<dt>목표</dt>
+<dd>Following과 Connecting으로 주의 지속시간을 연장하고, Labeling과 Checking in으로 잊어버림(forgetting)을 극복한다.</dd>
+
+<dt>완료 기준</dt>
+<dd>호흡을 거의 잊지 않고 졸지 않는다. 이정표 1(Milestone 1: Continuous Attention) 달성.</dd>
+
+<dt>주요 장애물</dt>
+<dd>잊어버림(forgetting), 둔화(dullness).</dd>
+</dl>
+
+<h3>잊어버림의 메커니즘</h3>
+
+<p>잊어버림은 <em>미묘한 산만(subtle distraction)</em>이 <em>거친 산만(gross distraction)</em>으로 전환될 때 발생한다. 미묘한 산만은 항상 존재하지만, 그중 하나가 충분히 매력적이면 주의의 주요 초점을 차지하고, 명상 대상이 배경으로 밀려나며, 결국 완전히 사라진다.</p>
+
+<pre class="ascii"><code>  잊어버림의 진행 과정
+  ════════════════════════════════════════
+
+  안정 상태          미묘한 산만
+  ┌──────────┐      ┌──────────┐
+  │◉ 호흡    │      │◉ 호흡    │
+  │  ○ 소리  │  →   │  ○ 소리  │
+  │  ○ 생각  │      │  ○ 생각↑ │
+  └──────────┘      └──────────┘
+                          │
+                          ▼
+  거친 산만           잊어버림
+  ┌──────────┐      ┌──────────┐
+  │  ○ 호흡↓ │      │          │
+  │◉ 생각    │  →   │◉ 생각    │
+  │  ○ 소리  │      │  ○ 다른것│
+  └──────────┘      └──────────┘
+                    호흡 완전 소실
+
+  ※ ◉ = 주의의 주요 초점
+  ※ ○ = 주변 인식 내 대상
+  ※ ↑↓ = 주의 점유의 증가/감소
+</code></pre>
+
+<h3>핵심 기법</h3>
+
+<p><em>Following</em>: 호흡 주기의 모든 지점과 개별 감각(들숨 내 3~12개)을 점점 더 정밀하게 추적한다. <em>Connecting</em>: following의 확장으로, 호흡 주기 간의 비교(길이, 깊이, 멈춤)를 관찰한다. <em>Labeling</em>: 산만에 간단한 중립적 이름을 붙여 내성적 인식을 강화한다. <em>Checking in</em>: 약 6호흡마다 의도적으로 내면을 살펴 거친 산만이 있는지 확인한다.</p>
+
+<pre class="ascii"><code>  Labeling + Checking In의 상보적 작용
+  ════════════════════════════════════════
+
+  Labeling (사후 인식)
+  ┌──────────────────────────────────┐
+  │  산만 발생 → "아하!" → "생각"   │
+  │                          (레이블)│
+  │  효과: 내성적 인식에게            │
+  │       '유괴범의 얼굴'을 가르침   │
+  └──────────────────────────────────┘
+           +
+  Checking In (사전 탐지)
+  ┌──────────────────────────────────┐
+  │  ~6호흡마다 → 내면 스냅샷 →     │
+  │  거친 산만 있으면 → 집중 강화    │
+  │                                  │
+  │  효과: '유괴범이 다가올 때'      │
+  │        미리 발견                 │
+  └──────────────────────────────────┘
+           ↓
+  결과: 잊어버림이 발생하기 전에 차단
+
+  ※ 두 기법이 합쳐져 지속적 내성적
+     인식(Stage 4)의 토대를 형성
+</code></pre>
+
+<div class="callout">
+<div class="callout-title">Milestone 1</div>
+<p>이 단계를 숙달하면 첫 번째 이정표인 <em>Continuous Attention</em>(지속적 주의)을 달성한다. 호흡이 의식적 인식에서 떠나지 않으며, 마음은 여전히 돌아다니지만 명상 대상에 묶여 있어 너무 멀리 가지 않는다. 숙련된 명상의 진정한 시작이다.</p>
+</div>
+
+<div class="page-nav">
+<a href="#stage2">← 이전: Stage 2</a>
+<a href="#stage4">다음: Stage 4 →</a>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- STAGE 4                                     -->
+<!-- ═══════════════════════════════════════════ -->
+
+<section id="stage4">
+<h2>Stage 4: 산만함 극복</h2>
+<div class="stage-badge">Skilled · Stage 04</div>
+
+<dl>
+<dt>목표</dt>
+<dd>지속적 내성적 인식(continuous introspective awareness)을 계발하여 거친 산만(gross distraction)과 강한 둔화(strong dullness)를 극복한다.</dd>
+
+<dt>완료 기준</dt>
+<dd>거친 산만과 강한 둔화 모두 사라진다. 감각, 생각, 기억, 감정은 여전히 일어나지만 주의를 빼앗지 못한다.</dd>
+
+<dt>주요 장애물</dt>
+<dd>Gross distraction(거친 산만), Strong dullness(강한 둔화), 감정적 정화(purification).</dd>
+</dl>
+
+<h3>지속적 내성적 인식</h3>
+
+<p>Stage 3의 checking in이 간헐적이었다면, Stage 4에서는 호흡에 주의를 고정한 채 동시에 마음 전체를 주변 인식으로 감시한다. <em>마음이 호흡을 지켜보는 동안 마음을 지켜보는(watching the mind while the mind watches the breath)</em> 메타인지적 인식을 추구한다.</p>
+
+<pre class="ascii"><code>  지속적 내성적 인식
+  ════════════════════════════════════════
+
+  Stage 3: Checking In (간헐적)
+  ┌──────────────────────────────────┐
+  │ 호흡◉──────────◉──check──◉───── │
+  │                    in↓           │
+  │               [스냅샷]           │
+  └──────────────────────────────────┘
+
+  Stage 4: Continuous Awareness (지속적)
+  ┌──────────────────────────────────┐
+  │ 호흡◉━━━━━━━━━━━━━━━━━━━━━━━━━━ │
+  │      ░░░░░░░░░░░░░░░░░░░░░░░░░░ │
+  │      마음 전체를 항시 인식        │
+  └──────────────────────────────────┘
+
+  ※ ◉━━ = 주의: 호흡에 고정
+  ※ ░░░ = 인식: 마음 활동 전체를 감시
+  ※ 핫티를 든 채 붐비는 방을 통과하는 것
+     = 초점 유지 + 주변 인식 유지
+</code></pre>
+
+<h3>감정적 정화</h3>
+
+<p>마음이 고요해지면서 깊이 묻혀 있던 트라우마, 미해결 갈등, 감정이 의식으로 올라온다. 이를 다루는 원칙은 <em>인정(acknowledge), 허용(allow), 수용(accept)</em>이며, 분석하거나 판단하지 않는다. 통증에 대해서는 <em>S = P × R</em> 공식을 적용한다: Suffering(고통) = Pain(통증) × Resistance(저항). 저항이 0이면 고통도 0이다.</p>
+
+<h3>핵심 기법</h3>
+
+<p>거친 산만 극복은 두 단계이다: (1) 이미 존재하는 거친 산만을 인식하고 놓아주는 것, (2) 미묘한 산만이 거친 산만으로 발전할 가능성을 미리 인식하고 예방하는 것. 강한 둔화는 세 단계 프로토콜로 극복한다: (1) 해독제로 완전 각성, (2) 내성적 인식으로 재발 조기 탐지, (3) 둔화가 돌아오지 않을 때까지 반복.</p>
+
+<div class="callout">
+<div class="callout-title">수행 요령</div>
+<p>마음을 억제하지 말 것. 호흡에 과도하게 집중하는 터널 비전은 투쟁-도피 반응과 같은 유형의 주의로, 긴장과 불안을 수반하며 오히려 산만과 둔화에 더 취약해진다. <em>Don't try to strong-arm your mind into a state of calm. Relax. Let it happen on its own.</em></p>
+</div>
+
+<div class="page-nav">
+<a href="#stage3">← 이전: Stage 3</a>
+<a href="#stage5">다음: Stage 5 →</a>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- STAGE 5                                     -->
+<!-- ═══════════════════════════════════════════ -->
+
+<section id="stage5">
+<h2>Stage 5: 무기력 극복</h2>
+<div class="stage-badge">Skilled · Stage 05</div>
+
+<dl>
+<dt>목표</dt>
+<dd>안정적 미세 둔함(subtle dullness)을 극복하고, body scanning으로 마음챙김의 힘을 증가시킨다.</dd>
+
+<dt>완료 기준</dt>
+<dd>세션 대부분 강렬하고 명료한 인식을 유지한다.</dd>
+
+<dt>주요 장애물</dt>
+<dd>Subtle dullness(미세 둔함) — 깊은 집중으로 위장되어 인지하기 어렵다.</dd>
+</dl>
+
+<h3>미세 둔함의 위험</h3>
+
+<p><em>Subtle dullness</em>는 Stage 4에서 허용되었던 <em>안정적 미묘한 둔화</em>이다. 문제는 이것이 깊은 집중과 혼동되기 쉽다는 점이다. 호흡 감각의 생생함이 감소하고 주변 인식이 희미해지지만, 주의 자체는 안정되어 있어 수행이 잘 되고 있다는 착각을 만든다.</p>
+
+<pre class="ascii"><code>  Subtle Dullness vs. True Concentration
+  ════════════════════════════════════════
+
+  미세 둔함 (Subtle Dullness)
+  ┌──────────────────────────────────┐
+  │  호흡 감각: ○ ○ ○  (흐릿)       │
+  │  주변 인식: ░  (어두움)          │
+  │  안정감:    ████████ (높음)      │
+  │  → 착각: "깊은 집중에 빠졌다"   │
+  └──────────────────────────────────┘
+
+  진정한 집중 (True Concentration)
+  ┌──────────────────────────────────┐
+  │  호흡 감각: ◉ ◉ ◉  (생생함)     │
+  │  주변 인식: ░░░ (밝음)           │
+  │  안정감:    ████████ (높음)      │
+  │  → 마음챙김의 힘이 증가 중      │
+  └──────────────────────────────────┘
+
+  핵심 구분: 감각의 생생함(vividness)
+  ※ ◉ = 선명하고 세밀한 감각
+  ※ ○ = 흐릿하고 뭉뚱그려진 감각
+</code></pre>
+
+<h3>핵심 기법</h3>
+
+<p><em>Body scanning</em>(바디 스캐닝): 주의를 몸 전체로 체계적으로 이동시키며 각 부위의 호흡 관련 감각을 관찰한다. 이 기법은 두 가지 효과가 있다: (1) 미세 둔함을 감지하고 해소한다 — 새로운 감각에 주의를 기울이면 의식 에너지가 증가한다. (2) <em>마음챙김의 힘(power of mindfulness)</em>을 증가시킨다 — 의식의 총 에너지가 증가하여 주의와 인식이 동시에 강해진다.</p>
+
+<div class="callout">
+<div class="callout-title">수행 요령</div>
+<p>미세 둔함의 가장 위험한 형태는 <em>유쾌한 둔함</em>이다. 꿈 같은 심상, 원형적 비전, 쾌감이 심오한 경험으로 오인될 수 있다. 감각의 생생함이 판별 기준이다: 호흡의 세부 감각이 흐릿해졌다면, 아무리 안정적이더라도 둔함이다.</p>
+</div>
+
+<div class="page-nav">
+<a href="#stage4">← 이전: Stage 4</a>
+<a href="#stage6">다음: Stage 6 →</a>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- STAGE 6                                     -->
+<!-- ═══════════════════════════════════════════ -->
+
+<section id="stage6">
+<h2>Stage 6: 주의력 안정</h2>
+<div class="stage-badge">Skilled · Stage 06</div>
+
+<dl>
+<dt>목표</dt>
+<dd>배타적 주의(exclusive attention)를 달성하고, 메타인지적 내성적 인식(metacognitive introspective awareness)을 개발한다.</dd>
+
+<dt>완료 기준</dt>
+<dd>지속적 배타적 주의 달성. 이정표 2(Milestone 2: Sustained Exclusive Focus of Attention) 달성.</dd>
+
+<dt>주요 장애물</dt>
+<dd>Subtle distractions(미세 산만).</dd>
+</dl>
+
+<h3>미세 산만의 극복</h3>
+
+<p>Stage 6에 진입하면 거친 산만과 둔화는 극복되었지만, <em>미세 산만(subtle distractions)</em>이 주의의 배경에서 지속적으로 끼어든다. 이 단계의 목표는 이러한 미세 산만마저 제압하여 <em>배타적 주의(exclusive attention)</em>를 달성하는 것이다.</p>
+
+<pre class="ascii"><code>  미세 산만에서 배타적 주의로
+  ════════════════════════════════════════
+
+  Stage 5 완료 시점:
+  ┌──────────────────────────────────┐
+  │ ◉◉◉ 호흡  │ ○ 소리 ○ 생각     │
+  │  (주요)    │  (미세 산만들)      │
+  │  70~80%    │  20~30%             │
+  └──────────────────────────────────┘
+  주의 내에 미세 산만이 공존
+
+  Stage 6 목표:
+  ┌──────────────────────────────────┐
+  │ ◉◉◉◉◉◉◉ 호흡                   │
+  │  (배타적 주의) 100%              │
+  │                                  │
+  │  ░░ 인식은 유지 ░░               │
+  └──────────────────────────────────┘
+  주의에는 호흡만, 인식은 열려 있음
+
+  ※ ◉ = 주의 순간 (전부 호흡에 할당)
+  ※ ○ = 주의를 빼앗는 미세 산만
+  ※ ░ = 주변 인식 (유지됨)
+</code></pre>
+
+<h3>핵심 기법</h3>
+
+<p><em>Experiencing the whole body with the breath</em>(호흡과 함께 전신 경험하기): 주의의 범위를 확장하여 코 끝의 호흡 감각뿐만 아니라 호흡에 의해 전신에서 일어나는 감각을 동시에 경험한다. 이것은 주의의 범위(scope of attention)를 의도적으로 조절하는 훈련이며, 메타인지적 내성적 인식의 발달로 이어진다.</p>
+
+<div class="callout">
+<div class="callout-title">Milestone 2</div>
+<p>이 단계를 숙달하면 두 번째 이정표인 <em>Sustained Exclusive Focus of Attention</em>(지속적 배타적 주의)을 달성한다. 더 이상 미세 산만도 주의에 끼어들지 않으며, 마음은 안정되고 명료하다. 동시에 주변 인식은 활짝 열려 있다.</p>
+</div>
+
+<div class="page-nav">
+<a href="#stage5">← 이전: Stage 5</a>
+<a href="#stage7">다음: Stage 7 →</a>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- STAGE 7                                     -->
+<!-- ═══════════════════════════════════════════ -->
+
+<section id="stage7">
+<h2>Stage 7: 배타적 주의</h2>
+<div class="stage-badge">Transition · Stage 07</div>
+
+<dl>
+<dt>목표</dt>
+<dd>분별하는 마음(discriminating mind)의 완전한 고요화. 노력 없는 안정된 주의를 달성한다. 이정표 3(Milestone 3) 달성.</dd>
+
+<dt>완료 기준</dt>
+<dd>대부분의 시간 노력 없는 주의 유지. 마음의 통일(unification of mind).</dd>
+
+<dt>주요 장애물</dt>
+<dd>건조함(dryness), 통제 습관, 기이한 감각과 비자발적 신체 움직임.</dd>
+</dl>
+
+<h3>노력에서 무노력으로</h3>
+
+<p>Stage 7은 전환(transition) 단계이다. Stage 6까지의 모든 수행에서는 <em>의도적 노력</em>이 필요했다. Stage 7에서는 노력을 놓는 법을 배운다. 마음의 여러 하위 마음(sub-minds)이 충분히 통합되면, 주의를 유지하기 위한 노력이 더 이상 필요하지 않다. 오히려 노력이 방해가 된다.</p>
+
+<pre class="ascii"><code>  노력 → 무노력 전환
+  ════════════════════════════════════════
+
+  Stage 1-6: 의도적 노력
+  ┌──────────────────────────────────┐
+  │  하위마음 A → 호흡에 집중        │
+  │  하위마음 B → 산만 추구 ✗       │
+  │  하위마음 C → 둔화 경향 ✗       │
+  │  하위마음 D → 감정 처리 ✗       │
+  │  → 갈등 = 노력 필요             │
+  └──────────────────────────────────┘
+
+  Stage 7: 마음의 통일
+  ┌──────────────────────────────────┐
+  │  하위마음 A ─┐                   │
+  │  하위마음 B ─┤→ 호흡에 집중     │
+  │  하위마음 C ─┤   (합의)          │
+  │  하위마음 D ─┘                   │
+  │  → 조화 = 노력 불필요           │
+  └──────────────────────────────────┘
+
+  ※ 마음의 통일 = 하위 마음들의 합의
+  ※ 노력을 놓는 것이 이 단계의 핵심 기법
+</code></pre>
+
+<h3>핵심 기법</h3>
+
+<p><em>Close Following</em>: 호흡 감각의 가장 미세한 세부를 추적한다. <em>Investigation of Mental Objects</em>: 마음의 대상을 탐구하되 개념적 분석이 아닌 직접적 경험으로 관찰한다. <em>Pleasure Jhāna</em>: 명상적 기쁨(meditative joy)이 자연스럽게 발생하면 이를 자양분으로 삼는다.</p>
+
+<div class="callout">
+<div class="callout-title">Milestone 3</div>
+<p>이 단계를 숙달하면 세 번째 이정표인 <em>Effortless Stability of Attention</em>(무노력 안정)을 달성한다. 주의가 저절로 안정되며, 마음의 통일이 이루어진다. 이 지점부터는 노력이 아닌 기쁨과 고요가 수행을 이끈다.</p>
+</div>
+
+<div class="page-nav">
+<a href="#stage6">← 이전: Stage 6</a>
+<a href="#stage8">다음: Stage 8 →</a>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- STAGE 8                                     -->
+<!-- ═══════════════════════════════════════════ -->
+
+<section id="stage8">
+<h2>Stage 8: 정신적 유연성</h2>
+<div class="stage-badge">Adept · Stage 08</div>
+
+<dl>
+<dt>목표</dt>
+<dd>순응적 마음 탐구, 감각의 완전한 고요화를 달성하여 신체적 유연성(physical pliancy)과 명상적 기쁨(meditative joy)을 경험한다.</dd>
+
+<dt>완료 기준</dt>
+<dd>거의 매번 신체적 유연성과 명상적 기쁨이 달성된다.</dd>
+
+<dt>주요 장애물</dt>
+<dd>비정상적 감각, 에너지 격동(energy disturbances).</dd>
+</dl>
+
+<h3>감각의 진정과 정신적 유연성</h3>
+
+<p>Stage 8에서는 감각의 고요화(pacification of the senses)가 일어난다. 외부 감각 입력이 자연스럽게 줄어들고, 내부의 비정상적 감각(빛, 소리, 진동, 에너지 이동)이 경험될 수 있다. 이러한 경험은 마음의 통일 과정에서 자연스럽게 발생하는 것이며, 특별한 의미를 부여하거나 추구하지 않는다.</p>
+
+<pre class="ascii"><code>  Stage 8의 발달 과정
+  ════════════════════════════════════════
+
+  감각 고요화
+  ┌──────────┐     ┌──────────┐
+  │외부 감각 │     │외부 감각 │
+  │████████  │ →   │██        │
+  │(강함)    │     │(약해짐)  │
+  └──────────┘     └──────────┘
+       ↓                ↓
+  정신적 유연성     신체적 유연성
+  (mental          (physical
+   pliancy)         pliancy)
+  ┌──────────┐     ┌──────────┐
+  │마음이 저항│     │몸 전체의 │
+  │없이 조화적│     │쾌감·가벼움│
+  │으로 기능  │     │에너지 충만│
+  └─────┬────┘     └─────┬────┘
+        └────────┬───────┘
+                 ▼
+        ┌────────────────┐
+        │ Meditative Joy │
+        │ (명상적 기쁨)  │
+        │ Grade I~V piti │
+        └────────────────┘
+
+  ※ piti = 기쁨 에너지
+  ※ Grade I~V: 미세한 쾌감 → 전신 황홀
+</code></pre>
+
+<h3>핵심 기법</h3>
+
+<p><em>Momentary Concentration</em>: 순간순간 변화하는 대상에 집중한다. <em>Choiceless Attention</em>: 특정 대상을 선택하지 않고 일어나는 모든 것에 열린 주의를 기울인다. <em>Luminous Jhāna</em>: 내면의 빛과 명료함을 경험한다.</p>
+
+<div class="callout">
+<div class="callout-title">수행 요령</div>
+<p>이 단계에서 경험되는 비정상적 감각(빛, 소리, 에너지 이동, 비자발적 움직임)에 놀라거나 집착하지 않는다. 이것들은 마음의 통일 과정에서 발생하는 자연적 부산물이며, 관찰하고 놓아주면 된다.</p>
+</div>
+
+<div class="page-nav">
+<a href="#stage7">← 이전: Stage 7</a>
+<a href="#stage9">다음: Stage 9 →</a>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- STAGE 9                                     -->
+<!-- ═══════════════════════════════════════════ -->
+
+<section id="stage9">
+<h2>Stage 9: 정신적 고요</h2>
+<div class="stage-badge">Adept · Stage 09</div>
+
+<dl>
+<dt>목표</dt>
+<dd>Grade V piti의 반복 유지 후 강도가 가라앉으면서 고요(tranquility)와 평정(equanimity)이 출현한다.</dd>
+
+<dt>완료 기준</dt>
+<dd>안정된 주의 + 마음챙김 + 기쁨 + 고요 + 평정 = <em>Śamatha</em>(사마타) 달성.</dd>
+
+<dt>주요 장애물</dt>
+<dd>에너지 강도의 증가, 흥분.</dd>
+</dl>
+
+<h3>기쁨에서 고요로</h3>
+
+<p>Stage 8에서 달성한 명상적 기쁨(piti)은 처음에 강렬하고 흥분적이다. Stage 9에서는 이 강도가 자연스럽게 완화되면서 더 깊은 상태인 <em>고요(tranquility)</em>와 <em>평정(equanimity)</em>이 출현한다. 이 과정을 강제하지 않고 자연스럽게 진행되도록 한다.</p>
+
+<pre class="ascii"><code>  기쁨(Piti)에서 고요(Tranquility)로
+  ════════════════════════════════════════
+
+  강도
+  ▲
+  │  ██
+  │  ████
+  │  ██████  Piti (기쁨)
+  │  ████████  Grade V
+  │  ██████████
+  │  ████████████
+  │  ██████████████
+  │    ░░░░░░░░░░░░░░
+  │      ░░░░░░░░░░░░░░░
+  │        ░░░░░░░░░░░░░░░░
+  │          Tranquility (고요)
+  │            ░░░░░░░░░░░░░░░░░░
+  │              Equanimity (평정)
+  │                ░░░░░░░░░░░░░░░░░
+  └──────────────────────────────────→ 시간
+
+  ※ ████ = piti (강렬한 기쁨 에너지)
+  ※ ░░░░ = 고요와 평정 (안정적 행복)
+  ※ 전환은 자연스럽게 일어난다
+</code></pre>
+
+<h3>핵심 기법</h3>
+
+<p><em>Meditating on the Mind</em>: 마음 자체를 명상 대상으로 삼는다. 마음의 활동을 관찰하되 어떤 대상에도 집착하지 않는다. <em>Sustaining piti</em>: 기쁨 에너지가 자연스럽게 흐르도록 하되, 강제로 유지하거나 강화하지 않는다.</p>
+
+<div class="callout">
+<div class="callout-title">수행 요령</div>
+<p>Śamatha의 5가지 특성: <em>힘들이지 않는 안정된 주의(samādhi)</em>, <em>강력한 마음챙김(sati)</em>, <em>기쁨(joy)</em>, <em>고요(tranquility)</em>, <em>평정(equanimity)</em>. 이 다섯이 함께 현전할 때 사마타가 달성된다.</p>
+</div>
+
+<div class="page-nav">
+<a href="#stage8">← 이전: Stage 8</a>
+<a href="#stage10">다음: Stage 10 →</a>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- STAGE 10                                    -->
+<!-- ═══════════════════════════════════════════ -->
+
+<section id="stage10">
+<h2>Stage 10: 고요와 평정</h2>
+<div class="stage-badge">Adept · Stage 10</div>
+
+<dl>
+<dt>목표</dt>
+<dd>Śamatha(사마타)를 일상으로 확장한다. 이정표 4(Milestone 4) 달성.</dd>
+
+<dt>완료 기준</dt>
+<dd>사마타의 특성이 세션 간에도 지속된다. 강한 욕망이 약화되고, 분노와 악의가 사라진다.</dd>
+
+<dt>주요 장애물</dt>
+<dd>일상 자극에 의한 평정심의 압도.</dd>
+</dl>
+
+<h3>사마타에서 일상으로</h3>
+
+<p>Stage 10에서는 명상 중에 달성한 사마타의 특성들이 일상생활로 확장된다. 명상 세션과 일상의 경계가 흐려지며, 고요와 평정이 삶 전체를 관통한다. 이 상태에서 마음은 <em>vipassanā(통찰)</em> 수행을 위한 이상적 도구가 된다.</p>
+
+<pre class="ascii"><code>  Samatha → 일상 확장 → Insight
+  ════════════════════════════════════════
+
+  Stage 9: 세션 내 사마타
+  ┌─────────┐     ┌─────────┐
+  │ 명상    │     │ 일상    │
+  │ ◉◉◉◉◉ │     │ ○○○○○ │
+  │ 사마타  │     │ 일반적  │
+  │ 달성    │     │ 마음상태│
+  └─────────┘     └─────────┘
+
+  Stage 10: 일상으로 확장
+  ┌───────────────────────────┐
+  │ ◉◉◉◉◉◉◉◉◉◉◉◉◉◉◉◉◉◉◉ │
+  │ 사마타가 세션 간에도 지속  │
+  │ 기쁨-평정 선순환          │
+  └─────────────┬─────────────┘
+                ▼
+  ╔═══════════════════════════╗
+  ║ Milestone 4               ║
+  ║ 사마타 특성의 일상 지속   ║
+  ║ → Insight 수행의 토대    ║
+  ║ → Awakening으로의 길     ║
+  ╚═══════════════════════════╝
+
+  ※ ◉ = 사마타 품질이 유지되는 의식
+  ※ ○ = 일반적 의식 상태
+</code></pre>
+
+<h3>핵심 기법</h3>
+
+<p><em>일상 마음챙김</em>: 기쁨-평정 선순환을 일상에서 유지한다. 모든 활동에서 마음챙김을 적용하여 사마타의 특성이 약화되지 않게 한다. <em>Insight 수행</em>: 사마타 상태에서 현실의 본질을 직접적으로 관찰한다. 무상(impermanence), 공성(emptiness), 고통의 본성, 상호의존, 무아(no-Self)의 Insight를 추구한다.</p>
+
+<div class="callout">
+<div class="callout-title">Note</div>
+<p>Awakening(깨달음)은 특정 Stage에서만 가능한 것이 아니다. <em>사마타와 위빠사나의 일시적 수렴은 어떤 Stage에서든 가능하여 Awakening으로 이어질 수 있지만, Stage가 진행될수록 그 확률이 꾸준히 증가한다.</em> Stage 10의 안정된 사마타는 Insight를 위한 이상적 조건을 제공한다.</p>
+</div>
+
+<div class="page-nav">
+<a href="#stage9">← 이전: Stage 9</a>
+<a href="#glossary">다음: 용어 사전 →</a>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 부록: 용어 사전                              -->
+<!-- ═══════════════════════════════════════════ -->
+
+<section id="glossary">
+<h2>용어 사전</h2>
+
+<dl>
+<dt>Attention(주의)</dt>
+<dd>의식의 장에서 하나의 대상을 선별하여 분석하고 해석하는 집중적 앎의 방식. 개념화하고 추상화하는 경향이 있으며 자기 중심적이다.</dd>
+
+<dt>Peripheral Awareness(주변 인식)</dt>
+<dd>전체적, 관계적, 맥락적으로 모든 것을 포괄하는 배경 인식. 최소한으로 개념적이며, 덜 개인적이고 더 객관적이다. TMI에서 awareness는 항상 이것을 의미한다.</dd>
+
+<dt>Mindfulness(마음챙김)</dt>
+<dd>Attention과 peripheral awareness의 최적 상호작용. 의식의 총 에너지를 증대시켜 주의와 인식이 동시에 강력하게 작동하는 상태.</dd>
+
+<dt>Stable Attention(안정된 주의)</dt>
+<dd>주의의 초점을 의도적으로 향하고 유지하며, 초점의 범위를 조절하는 능력. 집중(concentration)보다 더 정확한 용어.</dd>
+
+<dt>Awakening(깨달음)</dt>
+<dd>완전하고 영구적인 고통으로부터의 해방. 궁극적 진리에 대한 직접 경험을 통해 무지를 타파하는 인지적 사건.</dd>
+
+<dt>Śamatha(사마타)</dt>
+<dd>힘들이지 않는 안정된 주의, 강력한 마음챙김, 기쁨, 고요, 평정의 5가지 특성을 갖춘 명상 상태.</dd>
+
+<dt>Vipassanā(위빠사나)</dt>
+<dd>현실의 참된 본성에 대한 심오한 통찰. 우리 자신과 세계에 대한 이해를 근본적으로 변화시키는 체험적 깨달음.</dd>
+
+<dt>Samādhi(삼매)</dt>
+<dd>안정된 주의 및 집중. Śamatha와 vipassanā 모두에 필요한 기본 역량.</dd>
+
+<dt>Five Hindrances(다섯 가지 장애)</dt>
+<dd>명상의 거의 모든 문제의 근원이 되는 5가지 보편적 심리 성향: Worldly Desire(세속적 욕망), Aversion(혐오), Laziness and Lethargy(게으름과 무기력), Agitation due to Worry and Remorse(걱정과 후회), Doubt(의심).</dd>
+
+<dt>Gross Distraction(거친 산만)</dt>
+<dd>산만이 주의의 주요 초점을 차지하여 명상 대상이 배경으로 밀려난 상태. 지속되면 잊어버림으로 이어진다.</dd>
+
+<dt>Subtle Dullness(미세 둔함)</dt>
+<dd>호흡 감각의 생생함이 감소하고 주변 인식이 희미해지는 미세한 상태. 인지하기 어렵고 안정된 주의의 환상을 만든다.</dd>
+
+<dt>Forgetting(잊어버림)</dt>
+<dd>거친 산만이 주의를 완전히 점유하여 명상 대상(호흡)이 의식에서 완전히 사라지는 것.</dd>
+
+<dt>Mind-Wandering(마음방황)</dt>
+<dd>명상 대상을 잊어버린 후 마음이 생각에서 생각으로 떠도는 상태. 몇 초에서 몇 분까지 지속될 수 있다.</dd>
+
+<dt>Following the Breath(호흡 따르기)</dt>
+<dd>호흡 주기의 각 지점(시작, 끝, 멈춤)을 식별하고 가능한 많은 감각을 관찰하는 기법.</dd>
+
+<dt>Checking In(점검하기)</dt>
+<dd>자발적 인식을 기다리지 않고 의도적으로 주의를 내면에 돌려 거친 산만이 있는지 확인하는 기법.</dd>
+
+<dt>Labeling(레이블링)</dt>
+<dd>마음방황이나 산만을 인식한 순간 간단한 중립적 이름(생각, 기억 등)을 붙이는 기법. 내성적 인식을 강화한다.</dd>
+
+<dt>Body Scanning(바디 스캐닝)</dt>
+<dd>주의를 몸 전체로 체계적으로 이동시키며 각 부위의 호흡 관련 감각을 관찰하는 기법. 미세 둔함 극복과 마음챙김의 힘 증가에 사용.</dd>
+
+<dt>Exclusive Attention(배타적 주의)</dt>
+<dd>주의의 모든 순간이 명상 대상에만 할당되어 미세 산만마저 사라진 상태. Stage 6에서 달성.</dd>
+
+<dt>Mental Pliancy(정신적 유연성)</dt>
+<dd>분별하는 마음의 완전한 진정으로 인한 정신적 유연성. 마음이 저항 없이 조화로운 전체로 기능하는 상태.</dd>
+
+<dt>Physical Pliancy(신체적 유연성)</dt>
+<dd>감각의 완전한 고요화 이후 몸 전체에서 경험되는 쾌감, 가벼움, 에너지 충만의 상태.</dd>
+
+<dt>Meditative Joy(명상적 기쁨)</dt>
+<dd>정신적 유연성과 신체적 유연성이 합쳐질 때 발생하는 강렬한 기쁨(piti). Grade I에서 V까지 점진적으로 강해진다.</dd>
+
+<dt>Equanimity(평정)</dt>
+<dd>쾌락과 고통, 이득과 손실에 대한 균형 잡힌 평온. 사마타의 5가지 특성 중 하나.</dd>
+
+<dt>Tranquility(고요)</dt>
+<dd>기쁨 에너지의 강도가 자연스럽게 가라앉은 후 출현하는 깊은 평화와 안정.</dd>
+
+<dt>Jhāna(선정)</dt>
+<dd>깊은 집중 상태에서의 명상적 흡수. Pleasure jhāna, luminous jhāna 등 다양한 형태가 있다.</dd>
+
+<dt>Purification(정화)</dt>
+<dd>명상 중 깊이 묻힌 기억, 감정, 조건화가 표면에 올라와 마음챙김의 조명력에 의해 해소되는 과정. 주로 Stage 4와 7에서 발생.</dd>
+
+<dt>Insight(통찰)</dt>
+<dd>현실의 본질과 자아에 대한 근본적 오해를 체험적으로 교정하는 깨달음의 경험. 무상, 공성, 무아 등에 대한 직접적 이해.</dd>
+
+<dt>Mind-System(마음 체계)</dt>
+<dd>마음을 하나의 단일체가 아닌 여러 하위 마음(sub-minds)의 상호작용 체계로 이해하는 TMI의 핵심 모델.</dd>
+
+<dt>Sub-minds(하위 마음)</dt>
+<dd>마음 체계를 구성하는 개별적 정신 과정들. 각각 고유한 기능, 의제, 조건화를 가지며, 의식에 정보를 투사한다.</dd>
+
+<dt>Narrating Mind(서술하는 마음)</dt>
+<dd>경험에 대한 내적 독백을 생성하는 하위 마음. 자아감(sense of self)의 주요 원천이지만, 마음 전체를 대표하지는 않는다.</dd>
+
+<dt>Moments of Consciousness(의식의 순간)</dt>
+<dd>의식이 연속적 흐름이 아니라 개별적인 순간들의 빠른 연속이라는 TMI의 의식 모델. 각 순간은 하나의 대상만 인식한다.</dd>
+
+<dt>Unification of Mind(마음의 통합)</dt>
+<dd>하위 마음들이 공유된 합의를 통해 협력적이고 일관되게 작동하는 상태. Stage 7에서 달성되며 무노력 주의의 기반.</dd>
+</dl>
+
+<div class="page-nav">
+<a href="#stage10">← 이전: Stage 10</a>
+<span></span>
+</div>
+</section>
+
+
+</main>
+</body>
+</html>
